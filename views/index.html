@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basetix - Register & Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .form-container {
+      margin-top: 50px;
+      text-align: center;
+    }
+    form {
+      display: none;
+    }
+    form.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Basetix - Register & Login</h2>
+
+    <!-- Umschalt-Buttons -->
+    <button onclick="showForm('register')">Registrieren</button>
+    <button onclick="showForm('login')">Anmelden</button>
+
+    <!-- Registrierungsformular -->
+    <form id="registerForm" class="active" action="/register" method="POST">
+      <h3>Registrieren</h3>
+      <input type="text" name="username" placeholder="Benutzername" required><br>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Passwort" required><br>
+      <button type="submit">Registrieren</button>
+    </form>
+
+    <!-- Loginformular -->
+    <form id="loginForm" action="/login" method="POST">
+      <h3>Anmelden</h3>
+      <input type="email" name="email" placeholder="Email" required><br>
+      <input type="password" name="password" placeholder="Passwort" required><br>
+      <button type="submit">Anmelden</button>
+    </form>
+  </div>
+
+  <!-- Frontend-Logik -->
+  <script src="/script.js"></script>
+
+</body>
+</html>
